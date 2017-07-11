@@ -4,13 +4,13 @@
 
 // default color scheme
 $bg_color: #1e1e1e;
-$fg_color: #EEE8D5;
+$fg_color: #93E0E3;
 $base_color: #202020;
 $text_color: #EEE8D5;
 $selected_bg_color: #93E0E3;
 $selected_fg_color: #1e1e1e;
 $tooltip_bg_color: #1e1e1e;
-$tooltip_fg_color: #EEE8D5;
+$tooltip_fg_color: #93E0E3;
 
 $selected_borders_color: darken($selected_bg_color, 20%);
 $borders_color: shade($bg_color, .88);
@@ -18,7 +18,7 @@ $borders_edge: transparentize($fg_color, 0.93);
 
 // dark colors
 $dark_bg_color: $bg_color;
-$dark_fg_color: #93E0E3;
+$dark_fg_color: $fg_color;
 
 // shadows
 $dark_shadow: #000;
@@ -38,7 +38,7 @@ $scrollbar_slider_active_color: lighten($selected_bg_color, 10%);
 
 $switch_disabled_bg_color: #d8d8d8;
 $switch_disabled_border_color: #ccc;
-$switch_disabled_fg_color: mix(#1e1e1e, #f0f0f0, .5);
+$switch_disabled_fg_color: mix($fg_color, $text_color, .3);
 $switch_disabled_slider_bg_color: #e8eaec;
 $switch_bg_color: mix($bg_color, $base_color, .3);
 $switch_fg_color: #8e969e;
