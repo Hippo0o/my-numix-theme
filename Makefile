@@ -3,15 +3,15 @@ SASSFLAGS=--sourcemap=none
 GLIB_COMPILE_RESOURCES=glib-compile-resources
 RES_DIR=src/gtk-3.0
 SCSS_DIR=$(RES_DIR)/scss
-DIST_DIR=$(RES_DIR)/dist
+DIST_DIR=$(RES_DIR)
 RES_DIR320=src/gtk-3.20
 SCSS_DIR320=$(RES_DIR320)/scss
-DIST_DIR320=$(RES_DIR320)/dist
+DIST_DIR320=$(RES_DIR320)
 INSTALL_DIR=$(DESTDIR)/usr/share/themes/numix-electric-dark
 ROOT_DIR=${PWD}
 UTILS=scripts/utils.sh
 
-all: clean gresource
+all: clean css
 
 css:
 	$(SASS) --update $(SASSFLAGS) $(SCSS_DIR):$(DIST_DIR)
@@ -28,9 +28,7 @@ watch: clean
 	done
 
 clean:
-	rm -rf $(DIST_DIR)
 	rm -f $(RES_DIR)/gtk.gresource
-	rm -rf $(DIST_DIR320)
 	rm -f $(RES_DIR320)/gtk.gresource
 	rm -rf $(ROOT_DIR)/dist
 

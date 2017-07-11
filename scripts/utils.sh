@@ -24,7 +24,6 @@ do_install() {
 		cp -t "${_DIR}" \
 			"${GTKVER}/gtk.css" \
 			"${GTKVER}/gtk-dark.css" \
-			"${GTKVER}/gtk.gresource" \
 			"${GTKVER}/thumbnail.png"
 
 		cd "${_DIR}"
