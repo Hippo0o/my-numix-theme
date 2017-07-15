@@ -7,7 +7,7 @@ DIST_DIR=$(RES_DIR)
 RES_DIR320=src/gtk-3.20
 SCSS_DIR320=$(RES_DIR320)/scss
 DIST_DIR320=$(RES_DIR320)
-INSTALL_DIR=$(DESTDIR)/usr/share/themes/numix-electric-dark
+INSTALL_DIR=$(DESTDIR)/usr/share/themes/my-numix-dark
 ROOT_DIR=${PWD}
 UTILS=scripts/utils.sh
 
