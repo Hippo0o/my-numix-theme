@@ -4122,7 +4122,7 @@ scrolledwindow undershoot.right {
 scrolledwindow junction {
   border-color: transparent;
   border-image: linear-gradient(to bottom, #1a1a1a 1px, transparent 1px) 0 0 0 1/0 1px stretch;
-  background-color: mix(#202020,#1e1e1e,0.4); }
+  background-color: #1e1e1e; }
   scrolledwindow junction:dir(rtl) {
     border-image-slice: 0 1 0 0; }
   scrolledwindow junction:backdrop {
@@ -4358,7 +4358,7 @@ scale {
  ! Scrollbar
 ************/
 scrollbar {
-  background-color: mix(#202020,#1e1e1e,0.4);
+  background-color: #1e1e1e;
   transition: 300ms ease-out; }
   * {
     -GtkScrollbar-has-backward-stepper: false;
@@ -4381,11 +4381,11 @@ scrollbar {
     border: 1px solid transparent;
     border-radius: 2px;
     background-clip: padding-box;
-    background-color: #0f0f0f; }
+    background-color: rgba(147, 224, 227, 0.3); }
     scrollbar slider:hover {
-      background-color: #090909; }
+      background-color: rgba(147, 224, 227, 0.5); }
     scrollbar slider:hover:active {
-      background-color: #bcecee; }
+      background-color: #93E0E3; }
     scrollbar slider:backdrop {
       background-color: mix(#93E0E3,#1e1e1e,0.4); }
     scrollbar slider:disabled {
@@ -4395,7 +4395,7 @@ scrollbar {
   scrollbar.vertical slider {
     min-height: 40px; }
   scrollbar.fine-tune slider:active {
-    background-color: #e4f7f8; }
+    background-color: #bcecee; }
   scrollbar.overlay-indicator {
     opacity: .8; }
     scrollbar.overlay-indicator:not(.dragging):not(.hovering) {
@@ -4429,11 +4429,11 @@ scrollbar {
     border-color: #1a1a1a;
     background-color: transparent;
     box-shadow: none;
-    color: #0f0f0f; }
+    color: rgba(147, 224, 227, 0.3); }
     scrollbar button:hover {
-      color: #090909; }
+      color: rgba(147, 224, 227, 0.5); }
     scrollbar button:active, scrollbar button:checked {
-      color: #bcecee; }
+      color: #93E0E3; }
     scrollbar button:backdrop {
       color: mix(#93E0E3,#1e1e1e,0.4); }
   scrollbar.vertical button.down {
