@@ -52,7 +52,7 @@
 @define-color lightdm_bg_color #1e1e1e;
 @define-color lightdm_fg_color #93E0E3;
 /* widget text/foreground color on backdrop windows */
-@define-color theme_unfocused_fg_color inherit;
+@define-color theme_unfocused_fg_color none;
 /* text color for entries, views and content in general on backdrop windows */
 @define-color theme_unfocused_text_color #EEE8D5;
 /* widget base background color on backdrop windows */
@@ -137,7 +137,7 @@ image, image:disabled, label, label:disabled, box, box:disabled, grid, grid:disa
 label.separator {
   color: #93E0E3; }
   label.separator:backdrop {
-    color: inherit; }
+    color: none; }
 label selection {
   background-color: #93E0E3;
   color: #1e1e1e; }
@@ -146,7 +146,7 @@ label:disabled {
   label:disabled:backdrop {
     color: mix(#93E0E3,#1e1e1e,0.5); }
 label:backdrop {
-  color: inherit; }
+  color: none; }
 
 assistant .sidebar {
   background-color: #202020;
@@ -171,7 +171,7 @@ assistant .sidebar label.highlight {
     background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(#93E0E3), to(transparent)); } }
 stacksidebar row.needs-attention > label {
   animation: needs_attention 150ms ease-in;
-  background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(#94e0e3), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.45, to(rgba(0, 0, 0, 0.9058823529)), to(transparent));
+  background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(#94e0e3), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.45, to(rgba(0, 0, 0, 0.90588)), to(transparent));
   background-size: 6px 6px, 6px 6px;
   background-repeat: no-repeat;
   background-position: right 3px, right 2px; }
@@ -193,7 +193,11 @@ button, headerbar button, .titlebar:not(headerbar) button, toolbar button, toolb
   transition: 150ms ease;
   outline-color: transparent; }
 
-calendar.view, calendar.view:backdrop, calendar.button, calendar.button:hover, calendar.button:backdrop, calendar.button:disabled, menu menuitem calendar.button, .menu menuitem calendar.button, .context-menu menuitem calendar.button, menu menuitem calendar.button:hover, .menu menuitem calendar.button:hover, .context-menu menuitem calendar.button:hover, popover.background calendar.button, popover.background calendar.button:hover, modelbutton.flat,
+calendar.view, calendar.view:backdrop, calendar.button, calendar.button:hover, calendar.button:backdrop, calendar.button:disabled, menu menuitem calendar.button,
+.menu menuitem calendar.button,
+.context-menu menuitem calendar.button, menu menuitem calendar.button:hover,
+.menu menuitem calendar.button:hover,
+.context-menu menuitem calendar.button:hover, popover.background calendar.button, popover.background calendar.button:hover, modelbutton.flat,
 menuitem.button.flat, notebook > header > tabs > arrow:disabled {
   border-color: transparent;
   background-color: transparent;
@@ -419,7 +423,7 @@ spinbutton button {
   spinbutton button:disabled {
     color: alpha(mix(#93E0E3,#1e1e1e,0.5),0.8); }
   spinbutton button:backdrop {
-    color: mix(#202020,inherit,0.9); }
+    color: mix(#202020,none,0.9); }
   spinbutton button:backdrop:disabled {
     color: alpha(mix(#93E0E3,#1e1e1e,0.5),0.8); }
 spinbutton:not(.vertical) {
@@ -1545,9 +1549,9 @@ headerbar.selection-mode,
       -gtk-icon-shadow: none; }
   headerbar.selection-mode .dim-label, headerbar.selection-mode label.separator, .selection-menu headerbar.selection-mode .dim-label, .selection-menu headerbar.selection-mode label.separator,
   .titlebar:not(headerbar).selection-mode .dim-label,
-  .titlebar:not(headerbar).selection-mode label.separator,
-  .selection-menu .titlebar:not(headerbar).selection-mode .dim-label,
-  .selection-menu .titlebar:not(headerbar).selection-mode label.separator {
+  .titlebar:not(headerbar).selection-mode label.separator, .selection-menu
+  .titlebar:not(headerbar).selection-mode .dim-label, .selection-menu
+  .titlebar:not(headerbar).selection-mode label.separator {
     color: #3ac6cc; }
 
 /**********
@@ -1569,7 +1573,7 @@ calendar {
     calendar.button:hover {
       color: #93E0E3; }
     calendar.button:backdrop {
-      color: alpha(inherit,0.55); }
+      color: alpha(none,0.55); }
     calendar.button:disabled {
       color: alpha(mix(#93E0E3,#1e1e1e,0.5),0.55); }
   calendar:indeterminate, calendar:indeterminate:backdrop {
@@ -1578,7 +1582,7 @@ calendar {
     font-size: smaller;
     color: #93E0E3; }
   calendar:backdrop {
-    color: #EEE8D5; }
+    color: none; }
 
 /* gnome-calendar */
 .calendar-view {
@@ -1625,7 +1629,7 @@ colorswatch.light overlay {
   colorswatch.light overlay:hover {
     border-color: #1a1a1a; }
   colorswatch.light overlay:backdrop {
-    color: #EEE8D5; }
+    color: none; }
 colorswatch:drop(active) {
   box-shadow: none; }
   colorswatch:drop(active).light overlay {
@@ -2125,90 +2129,188 @@ menubar, .menubar {
 /******
  ! Menu
 *******/
-menu, .menu, .context-menu {
+menu,
+.menu,
+.context-menu {
   border: 0;
   border-radius: 0;
   padding: 0;
   background-color: #1e1e1e;
   color: #93E0E3; }
-  .csd menu,
-  .csd .menu,
-  .csd .context-menu {
+  .csd menu, .csd
+  .menu, .csd
+  .context-menu {
     border: 0; }
-  menu:selected, .menu:selected, .context-menu:selected {
+  menu:selected,
+  .menu:selected,
+  .context-menu:selected {
     background-color: #93E0E3; }
-  menu separator, .csd menu separator, .menu separator, .csd .menu separator, .context-menu separator, .csd .context-menu separator {
+  menu separator, .csd menu separator,
+  .menu separator, .csd
+  .menu separator,
+  .context-menu separator, .csd
+  .context-menu separator {
     background-color: #1b1b1b;
     margin: 1px 0; }
-  menu .separator, .csd menu .separator, .menu .separator, .csd .menu .separator, .context-menu .separator, .csd .context-menu .separator {
+  menu .separator, .csd menu .separator,
+  .menu .separator, .csd
+  .menu .separator,
+  .context-menu .separator, .csd
+  .context-menu .separator {
     color: #1b1b1b; }
-  menu menuitem, .menu menuitem, .context-menu menuitem {
+  menu menuitem,
+  .menu menuitem,
+  .context-menu menuitem {
     min-height: 14px;
     min-width: 40px;
     padding: 4px;
     border-radius: 0; }
-    menu menuitem:active, menu menuitem:hover, .menu menuitem:active, .menu menuitem:hover, .context-menu menuitem:active, .context-menu menuitem:hover {
+    menu menuitem:active, menu menuitem:hover,
+    .menu menuitem:active,
+    .menu menuitem:hover,
+    .context-menu menuitem:active,
+    .context-menu menuitem:hover {
       border: 0;
       background-color: #93E0E3;
       background-image: none;
       color: #1e1e1e; }
-    menu menuitem *:active, menu menuitem *:hover, .menu menuitem *:active, .menu menuitem *:hover, .context-menu menuitem *:active, .context-menu menuitem *:hover {
+    menu menuitem *:active, menu menuitem *:hover,
+    .menu menuitem *:active,
+    .menu menuitem *:hover,
+    .context-menu menuitem *:active,
+    .context-menu menuitem *:hover {
       color: #1e1e1e; }
-    menu menuitem:disabled, menu menuitem *:disabled, .menu menuitem:disabled, .menu menuitem *:disabled, .context-menu menuitem:disabled, .context-menu menuitem *:disabled {
+    menu menuitem:disabled, menu menuitem *:disabled,
+    .menu menuitem:disabled,
+    .menu menuitem *:disabled,
+    .context-menu menuitem:disabled,
+    .context-menu menuitem *:disabled {
       color: mix(#93E0E3,#1e1e1e,0.5); }
-    menu menuitem arrow, .menu menuitem arrow, .context-menu menuitem arrow {
+    menu menuitem arrow,
+    .menu menuitem arrow,
+    .context-menu menuitem arrow {
       min-height: 14px;
       min-width: 14px; }
-      menu menuitem arrow:dir(ltr), .menu menuitem arrow:dir(ltr), .context-menu menuitem arrow:dir(ltr) {
+      menu menuitem arrow:dir(ltr),
+      .menu menuitem arrow:dir(ltr),
+      .context-menu menuitem arrow:dir(ltr) {
         -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
         margin-left: 10px; }
-      menu menuitem arrow:dir(rtl), .menu menuitem arrow:dir(rtl), .context-menu menuitem arrow:dir(rtl) {
+      menu menuitem arrow:dir(rtl),
+      .menu menuitem arrow:dir(rtl),
+      .context-menu menuitem arrow:dir(rtl) {
         -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
         margin-right: 10px; }
-    menu menuitem.button, menu menuitem.button:focus, menu menuitem.button:active, menu menuitem.button:disabled, menu menuitem.button:active:disabled, menu menuitem.button.flat, menu menuitem.button.flat:focus, menu menuitem.button.flat:active, menu menuitem.button.flat:disabled, menu menuitem.button.flat:active:disabled, .menu menuitem.button, .menu menuitem.button:focus, .menu menuitem.button:active, .menu menuitem.button:disabled, .menu menuitem.button:active:disabled, .menu menuitem.button.flat, .menu menuitem.button.flat:focus, .menu menuitem.button.flat:active, .menu menuitem.button.flat:disabled, .menu menuitem.button.flat:active:disabled, .context-menu menuitem.button, .context-menu menuitem.button:focus, .context-menu menuitem.button:active, .context-menu menuitem.button:disabled, .context-menu menuitem.button:active:disabled, .context-menu menuitem.button.flat, .context-menu menuitem.button.flat:focus, .context-menu menuitem.button.flat:active, .context-menu menuitem.button.flat:disabled, .context-menu menuitem.button.flat:active:disabled {
+    menu menuitem.button, menu menuitem.button:focus, menu menuitem.button:active, menu menuitem.button:disabled, menu menuitem.button:active:disabled, menu menuitem.button.flat, menu menuitem.button.flat:focus, menu menuitem.button.flat:active, menu menuitem.button.flat:disabled, menu menuitem.button.flat:active:disabled,
+    .menu menuitem.button,
+    .menu menuitem.button:focus,
+    .menu menuitem.button:active,
+    .menu menuitem.button:disabled,
+    .menu menuitem.button:active:disabled,
+    .menu menuitem.button.flat,
+    .menu menuitem.button.flat:focus,
+    .menu menuitem.button.flat:active,
+    .menu menuitem.button.flat:disabled,
+    .menu menuitem.button.flat:active:disabled,
+    .context-menu menuitem.button,
+    .context-menu menuitem.button:focus,
+    .context-menu menuitem.button:active,
+    .context-menu menuitem.button:disabled,
+    .context-menu menuitem.button:active:disabled,
+    .context-menu menuitem.button.flat,
+    .context-menu menuitem.button.flat:focus,
+    .context-menu menuitem.button.flat:active,
+    .context-menu menuitem.button.flat:disabled,
+    .context-menu menuitem.button.flat:active:disabled {
       background-color: transparent;
       background-image: none;
       border: 0;
       box-shadow: none;
       color: currentColor; }
-    menu menuitem.button:hover, menu menuitem.button:focus:hover, menu menuitem.button:active:hover, menu menuitem.button:selected, menu menuitem.button.flat:hover, menu menuitem.button.flat:focus:hover, menu menuitem.button.flat:active:hover, menu menuitem.button.flat:selected, .menu menuitem.button:hover, .menu menuitem.button:focus:hover, .menu menuitem.button:active:hover, .menu menuitem.button:selected, .menu menuitem.button.flat:hover, .menu menuitem.button.flat:focus:hover, .menu menuitem.button.flat:active:hover, .menu menuitem.button.flat:selected, .context-menu menuitem.button:hover, .context-menu menuitem.button:focus:hover, .context-menu menuitem.button:active:hover, .context-menu menuitem.button:selected, .context-menu menuitem.button.flat:hover, .context-menu menuitem.button.flat:focus:hover, .context-menu menuitem.button.flat:active:hover, .context-menu menuitem.button.flat:selected {
+    menu menuitem.button:hover, menu menuitem.button:focus:hover, menu menuitem.button:active:hover, menu menuitem.button:selected, menu menuitem.button.flat:hover, menu menuitem.button.flat:focus:hover, menu menuitem.button.flat:active:hover, menu menuitem.button.flat:selected,
+    .menu menuitem.button:hover,
+    .menu menuitem.button:focus:hover,
+    .menu menuitem.button:active:hover,
+    .menu menuitem.button:selected,
+    .menu menuitem.button.flat:hover,
+    .menu menuitem.button.flat:focus:hover,
+    .menu menuitem.button.flat:active:hover,
+    .menu menuitem.button.flat:selected,
+    .context-menu menuitem.button:hover,
+    .context-menu menuitem.button:focus:hover,
+    .context-menu menuitem.button:active:hover,
+    .context-menu menuitem.button:selected,
+    .context-menu menuitem.button.flat:hover,
+    .context-menu menuitem.button.flat:focus:hover,
+    .context-menu menuitem.button.flat:active:hover,
+    .context-menu menuitem.button.flat:selected {
       background-image: none;
       background-color: #93E0E3;
       color: #1e1e1e; }
-    menu menuitem calendar, .menu menuitem calendar, .context-menu menuitem calendar {
+    menu menuitem calendar,
+    .menu menuitem calendar,
+    .context-menu menuitem calendar {
       color: #93E0E3; }
-      menu menuitem calendar.header, .menu menuitem calendar.header, .context-menu menuitem calendar.header {
+      menu menuitem calendar.header,
+      .menu menuitem calendar.header,
+      .context-menu menuitem calendar.header {
         border-bottom: 1px solid #1b1b1b;
         border-radius: 0; }
-        menu menuitem calendar.header:backdrop, .menu menuitem calendar.header:backdrop, .context-menu menuitem calendar.header:backdrop {
+        menu menuitem calendar.header:backdrop,
+        .menu menuitem calendar.header:backdrop,
+        .context-menu menuitem calendar.header:backdrop {
           border-color: #1b1b1b; }
-      menu menuitem calendar.button, .menu menuitem calendar.button, .context-menu menuitem calendar.button {
+      menu menuitem calendar.button,
+      .menu menuitem calendar.button,
+      .context-menu menuitem calendar.button {
         color: rgba(147, 224, 227, 0.55); }
-        menu menuitem calendar.button:hover, .menu menuitem calendar.button:hover, .context-menu menuitem calendar.button:hover {
+        menu menuitem calendar.button:hover,
+        .menu menuitem calendar.button:hover,
+        .context-menu menuitem calendar.button:hover {
           color: #93E0E3; }
-      menu menuitem calendar:indeterminate, menu menuitem calendar:indeterminate:backdrop, .menu menuitem calendar:indeterminate, .menu menuitem calendar:indeterminate:backdrop, .context-menu menuitem calendar:indeterminate, .context-menu menuitem calendar:indeterminate:backdrop {
+      menu menuitem calendar:indeterminate, menu menuitem calendar:indeterminate:backdrop,
+      .menu menuitem calendar:indeterminate,
+      .menu menuitem calendar:indeterminate:backdrop,
+      .context-menu menuitem calendar:indeterminate,
+      .context-menu menuitem calendar:indeterminate:backdrop {
         color: mix(#93E0E3,#1e1e1e,0.5); }
-    menu menuitem label:dir(rtl), menu menuitem label:dir(ltr), .menu menuitem label:dir(rtl), .menu menuitem label:dir(ltr), .context-menu menuitem label:dir(rtl), .context-menu menuitem label:dir(ltr) {
+    menu menuitem label:dir(rtl), menu menuitem label:dir(ltr),
+    .menu menuitem label:dir(rtl),
+    .menu menuitem label:dir(ltr),
+    .context-menu menuitem label:dir(rtl),
+    .context-menu menuitem label:dir(ltr) {
       color: inherit; }
-  menu > arrow, .menu > arrow, .context-menu > arrow {
+  menu > arrow,
+  .menu > arrow,
+  .context-menu > arrow {
     min-height: 14px;
     min-width: 14px;
     padding: 5px;
     background-color: #1e1e1e;
     border-radius: 0; }
-    menu > arrow.top, .menu > arrow.top, .context-menu > arrow.top {
+    menu > arrow.top,
+    .menu > arrow.top,
+    .context-menu > arrow.top {
       margin-top: -6px;
       border-bottom: 1px solid mix(#93E0E3,#202020,0.1);
       -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
-    menu > arrow.bottom, .menu > arrow.bottom, .context-menu > arrow.bottom {
+    menu > arrow.bottom,
+    .menu > arrow.bottom,
+    .context-menu > arrow.bottom {
       margin-bottom: -6px;
       border-top: 1px solid mix(#93E0E3,#202020,0.1);
       -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
-    menu > arrow:hover, .menu > arrow:hover, .context-menu > arrow:hover {
+    menu > arrow:hover,
+    .menu > arrow:hover,
+    .context-menu > arrow:hover {
       background-color: mix(#93E0E3,#202020,0.1); }
-    menu > arrow:backdrop, .menu > arrow:backdrop, .context-menu > arrow:backdrop {
+    menu > arrow:backdrop,
+    .menu > arrow:backdrop,
+    .context-menu > arrow:backdrop {
       background-color: mix(#1e1e1e,#202020,0.2); }
-    menu > arrow:disabled, .menu > arrow:disabled, .context-menu > arrow:disabled {
+    menu > arrow:disabled,
+    .menu > arrow:disabled,
+    .context-menu > arrow:disabled {
       color: transparent;
       background-color: transparent;
       border-color: transparent; }
@@ -2475,7 +2577,7 @@ printdialog paper {
   background: #fff;
   padding: 0; }
   printdialog paper:backdrop {
-    color: inherit;
+    color: none;
     border-color: #1a1a1a; }
 printdialog .dialog-action-box {
   margin: 10px; }
@@ -2674,7 +2776,7 @@ label.pin-label {
   font-size: smaller; }
   .keycap:backdrop {
     background-color: #202020;
-    color: inherit;
+    color: none;
     transition: 200ms ease-out; }
 
 /*****************
@@ -3724,7 +3826,7 @@ progressbar.osd {
         color: alpha(mix(#93E0E3,#1e1e1e,0.6),0.8); }
       .osd spinbutton:not(.vertical) button:backdrop,
       #XfceNotifyWindow spinbutton:not(.vertical) button:backdrop {
-        color: mix(#202020,inherit,0.9); }
+        color: mix(#202020,none,0.9); }
       .osd spinbutton:not(.vertical) button:active,
       #XfceNotifyWindow spinbutton:not(.vertical) button:active {
         box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.2); }
@@ -4285,7 +4387,7 @@ scrollbar {
     scrollbar slider:hover:active {
       background-color: #93E0E3; }
     scrollbar slider:backdrop {
-      background-color: mix(inherit,#1e1e1e,0.4); }
+      background-color: mix(none,#1e1e1e,0.4); }
     scrollbar slider:disabled {
       background-color: transparent; }
   scrollbar.horizontal slider {
@@ -4333,7 +4435,7 @@ scrollbar {
     scrollbar button:active, scrollbar button:checked {
       color: #93E0E3; }
     scrollbar button:backdrop {
-      color: mix(inherit,#1e1e1e,0.4); }
+      color: mix(none,#1e1e1e,0.4); }
   scrollbar.vertical button.down {
     -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
     border-top: 1px solid #1a1a1a; }
@@ -4392,7 +4494,7 @@ placessidebar row {
   placessidebar row:disabled {
     color: mix(#93E0E3,#1e1e1e,0.5); }
   placessidebar row:backdrop {
-    color: inherit; }
+    color: none; }
     placessidebar row:backdrop:selected {
       color: #1e1e1e; }
     placessidebar row:backdrop:disabled {
@@ -4679,7 +4781,7 @@ textview text {
   .view text:backdrop,
   iconview text:backdrop,
   textview text:backdrop {
-    color: #EEE8D5;
+    color: none;
     background-color: #202020; }
   .view:selected:focus, iconview:selected:focus, .view:selected, iconview:selected,
   .view text:selected:focus,
@@ -4726,7 +4828,7 @@ treeview.view header button, treeview.view header button:hover, treeview.view he
   treeview.view header button:backdrop {
     border-color: #1e1e1e;
     border-style: none solid solid none;
-    color: mix(inherit,#1e1e1e,0.5);
+    color: mix(none,#1e1e1e,0.5);
     background-image: none;
     background-color: #202020; }
     treeview.view header button:backdrop:disabled {
@@ -4759,7 +4861,7 @@ treeview.view {
     treeview.view.separator:backdrop {
       color: rgba(30, 30, 30, 0.1); }
   treeview.view:backdrop {
-    border-left-color: mix(inherit,#1e1e1e,0.5);
+    border-left-color: mix(none,#1e1e1e,0.5);
     border-top: #1e1e1e; }
   treeview.view:drop(active) {
     border-style: solid none;
@@ -4785,7 +4887,7 @@ treeview.view {
     treeview.view.expander:checked {
       -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
     treeview.view.expander:backdrop {
-      color: mix(#202020,inherit,0.7); }
+      color: mix(#202020,none,0.7); }
   treeview.view.progressbar {
     border-radius: 2px;
     border: 1px solid #42c9ce;
