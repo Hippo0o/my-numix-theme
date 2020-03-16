@@ -57,7 +57,7 @@
             padding: 0;
 
             &:backdrop {
-                color: $backdrop_fg_color;
+                
                 border-color: $backdrop_borders_color;
             }
         }
@@ -270,7 +270,7 @@
 
         &:backdrop {
             background-color: $backdrop_base_color;
-            color: $backdrop_fg_color;
+            
             transition: 200ms ease-out;
         }
     }

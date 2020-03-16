@@ -72,7 +72,7 @@
 
             &:hover { border-color: if($variant == 'light', transparentize($black, .5), $borders_color); }
 
-            &:backdrop { color: $backdrop_text_color; }
+            &:backdrop {  }
         }
 
         &:drop(active) {
