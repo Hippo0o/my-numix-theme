@@ -88,7 +88,7 @@ $wm_bg: $titlebar_bg_color;
 $wm_border_focused: transparent;
 $wm_border_unfocused: transparent;
 $wm_title_focused: mix($titlebar_fg_color, $titlebar_bg_color, .1);
-$wm_title_unfocused: mix($titlebar_fg_color, $titlebar_bg_color, .4);
+$wm_title_unfocused: mix($titlebar_fg_color, $titlebar_bg_color, .1);
 $wm_icons_focused: mix($titlebar_fg_color, $titlebar_bg_color, .1);
 $wm_icons_focused_prelight: $selected_bg_color;
 $wm_icons_focused_pressed: shade($selected_bg_color, .8);
@@ -103,9 +103,9 @@ $insensitive_borders_color: $borders_color;
 
 //colors for the backdrop state, derived from the main colors.
 $backdrop_base_color: $base_color;
-$backdrop_text_color: none;
+$backdrop_text_color: $text_color;
 $backdrop_bg_color: $bg_color;
-$backdrop_fg_color: none;
+$backdrop_fg_color: inherit;
 $backdrop_insensitive_color: $insensitive_fg_color;
 $backdrop_selected_bg_color: $selected_bg_color;
 $backdrop_selected_fg_color: $selected_fg_color;

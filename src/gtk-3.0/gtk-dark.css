@@ -49,7 +49,7 @@
 @define-color wm_border_focused transparent;
 @define-color wm_border_unfocused transparent;
 @define-color wm_title_focused mix(#93E0E3,#1e1e1e,0.1);
-@define-color wm_title_unfocused mix(#93E0E3,#1e1e1e,0.4);
+@define-color wm_title_unfocused mix(#93E0E3,#1e1e1e,0.1);
 @define-color wm_icons_focused mix(#93E0E3,#1e1e1e,0.1);
 @define-color wm_icons_focused_prelight #93E0E3;
 @define-color wm_icons_focused_pressed #58cfd4;
