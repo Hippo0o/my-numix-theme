@@ -9,8 +9,6 @@
     actionbar > revealer > box {
         padding: $spacing;
         border-top: 1px solid $borders_color;
-
-        &:backdrop { border-color: $backdrop_borders_color; }
     }
 }
 
@@ -64,11 +62,6 @@
                 @include button($selected_bg_color, $selected_fg_color);
 
                 &.suggested-action { @extend .suggested-action; }
-            }
-
-            &:backdrop {
-                background-color: $backdrop_selected_bg_color;
-                background-image: none;
             }
 
             .selection-menu {

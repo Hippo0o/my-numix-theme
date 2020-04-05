@@ -53,11 +53,6 @@
     background-color: $bg_color;
     color: $fg_color;
 
-    &:backdrop {
-        text-shadow: none;
-        icon-shadow: none;
-    }
-
     &.csd { background-color: $bg_color; }
 }
 

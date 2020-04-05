@@ -83,14 +83,6 @@
 
             &:disabled { color: $insensitive_fg_color; }
 
-            &:backdrop {
-                
-
-                &:selected { color: $backdrop_selected_fg_color; }
-
-                &:disabled { color: $backdrop_insensitive_color; }
-            }
-
             image.sidebar-icon {
                 opacity: $_placesidebar_icons_opacity; // dim the device icons
 

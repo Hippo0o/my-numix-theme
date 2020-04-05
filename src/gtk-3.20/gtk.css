@@ -112,9 +112,6 @@
 .background {
   background-color: #1e1e1e;
   color: #93E0E3; }
-  .background:backdrop {
-    text-shadow: none;
-    -gtk-icon-shadow: none; }
   .background.csd {
     background-color: #1e1e1e; }
 
@@ -141,15 +138,10 @@ label selection {
   color: #1e1e1e; }
 label:disabled {
   color: mix(#93E0E3,#1e1e1e,0.5); }
-  label:disabled:backdrop {
-    color: mix(#93E0E3,#1e1e1e,0.5); }
 
 assistant .sidebar {
   background-color: #202020;
   border-top: 1px solid #1a1a1a; }
-  assistant .sidebar:backdrop {
-    background-color: #202020;
-    border-color: #1a1a1a; }
 assistant.csd .sidebar {
   border-top-style: none; }
 assistant .sidebar label {
@@ -1089,8 +1081,6 @@ window.csd > .titlebar:not(headerbar) {
 actionbar > revealer > box {
   padding: 5px;
   border-top: 1px solid #1a1a1a; }
-  actionbar > revealer > box:backdrop {
-    border-color: #1a1a1a; }
 
 /****************************
  ! Search and Location bars *
@@ -1513,10 +1503,6 @@ headerbar.selection-mode,
       .titlebar:not(headerbar).selection-mode button.separator:disabled,
       .titlebar:not(headerbar).selection-mode button .separator:disabled {
         color: #66d3d7; }
-  headerbar.selection-mode:backdrop,
-  .titlebar:not(headerbar).selection-mode:backdrop {
-    background-color: #93E0E3;
-    background-image: none; }
   headerbar.selection-mode .selection-menu:backdrop, headerbar.selection-mode .selection-menu,
   .titlebar:not(headerbar).selection-mode .selection-menu:backdrop,
   .titlebar:not(headerbar).selection-mode .selection-menu {
@@ -1612,8 +1598,6 @@ colorswatch.dark overlay {
   color: #1e1e1e; }
   colorswatch.dark overlay:hover {
     border-color: #1a1a1a; }
-  colorswatch.dark overlay:backdrop {
-    color: #1e1e1e; }
 colorswatch.light overlay {
   color: #EEE8D5; }
   colorswatch.light overlay:hover {
@@ -2466,8 +2450,6 @@ printdialog paper {
   border: 1px solid #1a1a1a;
   background: #fff;
   padding: 0; }
-  printdialog paper:backdrop {
-    border-color: #1a1a1a; }
 printdialog .dialog-action-box {
   margin: 10px; }
 
@@ -2663,9 +2645,6 @@ label.pin-label {
   border-radius: 2px;
   box-shadow: inset 0 -3px mix(#1a1a1a,#202020,0.6);
   font-size: smaller; }
-  .keycap:backdrop {
-    background-color: #202020;
-    transition: 200ms ease-out; }
 
 /*****************
  ! Stackswitcher *
@@ -2723,31 +2702,6 @@ textview text selection, treeview.view:selected:focus, treeview.view:selected, .
     textview text:disabled:selected, iconview text selection:disabled:focus, .view text selection:disabled, iconview text selection:disabled,
     textview text selection:disabled, .cs-category-view:disabled:selected, .cs-category-view iconview:disabled:selected:focus, .cs-category-view iconview:disabled:selected, .background:not(.csd):not(.solid-csd) > box.vertical > notebook.frame > stack > scrolledwindow > viewport > box.vertical > frame > box.vertical iconview:disabled:selected:focus, .background:not(.csd):not(.solid-csd) > box.vertical > notebook.frame > stack > scrolledwindow > viewport > box.vertical > frame > box.vertical iconview:disabled:selected, .nemo-window .sidebar .nemo-places-sidebar iconview:disabled:selected:focus, .nemo-window .sidebar .nemo-places-sidebar .view:disabled:selected, .nemo-window .sidebar .nemo-places-sidebar iconview:disabled:selected {
       color: mix(#1e1e1e,#93E0E3,0.5); }
-    row:selected label:backdrop, label:backdrop:selected, label:backdrop selection, spinbutton:not(.vertical) selection:backdrop, entry selection:backdrop,
-    #XfceNotifyWindow entry selection:backdrop, #login_window entry selection:backdrop, calendar:backdrop:selected, row:backdrop:selected, flowbox flowboxchild:backdrop:selected, modelbutton.flat:backdrop:active, modelbutton.flat:active arrow:backdrop, modelbutton.flat:backdrop:selected, modelbutton.flat:selected arrow:backdrop,
-    menuitem.button.flat:backdrop:active,
-    menuitem.button.flat:active arrow:backdrop,
-    menuitem.button.flat:backdrop:selected,
-    menuitem.button.flat:selected arrow:backdrop, iconview:backdrop:selected:focus, .view:backdrop:selected, iconview:backdrop:selected,
-    iconview text:backdrop:selected:focus,
-    textview text:backdrop:selected:focus,
-    .view text:backdrop:selected,
-    iconview text:backdrop:selected,
-    textview text:backdrop:selected, iconview text selection:backdrop:focus, .view text selection:backdrop, iconview text selection:backdrop,
-    textview text selection:backdrop, .cs-category-view:backdrop:selected, .cs-category-view iconview:backdrop:selected:focus, .cs-category-view iconview:backdrop:selected, .background:not(.csd):not(.solid-csd) > box.vertical > notebook.frame > stack > scrolledwindow > viewport > box.vertical > frame > box.vertical iconview:backdrop:selected:focus, .background:not(.csd):not(.solid-csd) > box.vertical > notebook.frame > stack > scrolledwindow > viewport > box.vertical > frame > box.vertical iconview:backdrop:selected, .nemo-window .sidebar .nemo-places-sidebar iconview:backdrop:selected:focus, .nemo-window .sidebar .nemo-places-sidebar .view:backdrop:selected, .nemo-window .sidebar .nemo-places-sidebar iconview:backdrop:selected {
-      background-color: #93E0E3;
-      color: #1e1e1e; }
-      row:selected label:backdrop:disabled, label:backdrop:disabled:selected, label:disabled selection:backdrop, label:backdrop selection:disabled, spinbutton:not(.vertical) selection:backdrop:disabled, entry selection:backdrop:disabled,
-      #XfceNotifyWindow entry selection:backdrop:disabled, #login_window entry selection:backdrop:disabled, calendar:backdrop:disabled:selected, row:backdrop:disabled:selected, flowbox flowboxchild:backdrop:disabled:selected, modelbutton.flat:backdrop:disabled:active, modelbutton.flat:active arrow:backdrop:disabled, modelbutton.flat:backdrop:disabled:selected, modelbutton.flat:selected arrow:backdrop:disabled,
-      menuitem.button.flat:backdrop:disabled:active,
-      menuitem.button.flat:active arrow:backdrop:disabled,
-      menuitem.button.flat:backdrop:disabled:selected,
-      menuitem.button.flat:selected arrow:backdrop:disabled, .view:backdrop:disabled:selected, iconview:backdrop:disabled:selected,
-      .view text:backdrop:disabled:selected,
-      iconview text:backdrop:disabled:selected,
-      textview text:backdrop:disabled:selected, .view text selection:backdrop:disabled, iconview text selection:backdrop:disabled,
-      textview text selection:backdrop:disabled, .cs-category-view:backdrop:disabled:selected, .background:not(.csd):not(.solid-csd) > box.vertical > notebook.frame > stack > scrolledwindow > viewport > box.vertical > frame > box.vertical iconview:backdrop:disabled:selected, .nemo-window .sidebar .nemo-places-sidebar .view:backdrop:disabled:selected, .nemo-window .sidebar .nemo-places-sidebar iconview:backdrop:disabled:selected {
-        color: mix(#1e1e1e,#93E0E3,0.3); }
 
 /*********
  ! Buttons
@@ -4381,10 +4335,6 @@ placessidebar row {
     color: #1e1e1e; }
   placessidebar row:disabled {
     color: mix(#93E0E3,#1e1e1e,0.5); }
-  placessidebar row:backdrop:selected {
-    color: #1e1e1e; }
-  placessidebar row:backdrop:disabled {
-    color: mix(#93E0E3,#1e1e1e,0.5); }
   placessidebar row image.sidebar-icon {
     opacity: 0.7; }
     placessidebar row image.sidebar-icon:dir(ltr) {
@@ -4736,8 +4686,6 @@ treeview.view {
     color: mix(#93E0E3,#1e1e1e,0.5); }
     treeview.view:disabled:selected {
       color: mix(#1e1e1e,#93E0E3,0.4); }
-      treeview.view:disabled:selected:backdrop {
-        color: mix(#1e1e1e,#93E0E3,0.3); }
     treeview.view:disabled:backdrop {
       color: mix(#93E0E3,#1e1e1e,0.5); }
   treeview.view.separator {
@@ -4767,8 +4715,6 @@ treeview.view {
       color: mix(#93E0E3,#1e1e1e,0.7); }
       treeview.view.expander:selected:hover {
         color: #1e1e1e; }
-      treeview.view.expander:selected:backdrop {
-        color: mix(#93E0E3,#1e1e1e,0.7); }
     treeview.view.expander:checked {
       -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
     treeview.view.expander:backdrop {
@@ -4781,9 +4727,6 @@ treeview.view {
       box-shadow: inset 0 1px rgba(255, 255, 255, 0.05);
       background-color: #93E0E3;
       background-image: none; }
-      treeview.view.progressbar:selected:focus:backdrop, treeview.view.progressbar:selected:backdrop {
-        border-color: #202020;
-        background-color: mix(#202020,#93E0E3,0.9); }
       treeview.view.progressbar:selected:focus:disabled, treeview.view.progressbar:selected:disabled {
         background-color: #abe7e9; }
     treeview.view.progressbar:disabled {

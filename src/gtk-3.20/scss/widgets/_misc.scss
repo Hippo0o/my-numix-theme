@@ -55,11 +55,6 @@
             border: 1px solid $borders_color;
             background: $white;
             padding: 0;
-
-            &:backdrop {
-                
-                border-color: $backdrop_borders_color;
-            }
         }
 
         .dialog-action-box { margin: $spacing * 2; }
@@ -267,12 +262,6 @@
         border-radius: $roundness;
         box-shadow: if($variant == 'light', inset 0 -3px mix($base_color, $bg_color, .2), inset 0 -3px mix($borders_color, $base_color, .6));
         font-size: smaller;
-
-        &:backdrop {
-            background-color: $backdrop_base_color;
-            
-            transition: 200ms ease-out;
-        }
     }
 }
 
@@ -309,12 +298,6 @@
 
             &:disabled { color: mix($selected_fg_color, $selected_bg_color, .5); }
 
-            &:backdrop {
-                background-color: $backdrop_selected_bg_color; // Fixed Issue #430
-                color: $backdrop_selected_fg_color;
-
-                &:disabled { color: mix($backdrop_selected_fg_color, $selected_bg_color, .3); }
-            }
         }
     }
 }

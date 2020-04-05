@@ -183,8 +183,6 @@
             color: $menu_fg_color;
         }
 
-        &:backdrop { box-shadow: none; }
-
         &.osd {
             box-shadow: 0 2px 7px 3px alpha($black, .5);
 

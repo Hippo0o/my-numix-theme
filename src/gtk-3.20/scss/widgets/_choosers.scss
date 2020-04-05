@@ -64,7 +64,6 @@
 
             &:hover { border-color: if($variant == 'light', transparentize($black, .2), $borders_color); }
 
-            &:backdrop { color: $backdrop_selected_fg_color; }
         }
 
         &.light overlay {

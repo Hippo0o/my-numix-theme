@@ -98,9 +98,6 @@
 .background {
   background-color: #1e1e1e;
   color: #93E0E3; }
-  .background:backdrop {
-    text-shadow: none;
-    icon-shadow: none; }
   .background.csd {
     background-color: #1e1e1e; }
 
@@ -769,11 +766,6 @@ GtkComboBox .separator {
   background-image: none;
   border-radius: 2px 2px 0 0;
   color: mix(#93E0E3,#1e1e1e,0.1); }
-  .titlebar:backdrop {
-    background-color: #1e1e1e;
-    background-image: none;
-    color: mix(#93E0E3,#1e1e1e,0.6);
-    text-shadow: none; }
   .titlebar.default-decoration {
     border: 0;
     box-shadow: none; }
@@ -798,10 +790,6 @@ GtkComboBox .separator {
       background-color: transparent;
       color: #75d7db;
       box-shadow: none; }
-    .titlebar .titlebutton:backdrop {
-      background: none;
-      color: mix(#93E0E3,#1e1e1e,0.6);
-      icon-shadow: none; }
 
 /**************
  ! Action-bar *
@@ -1803,8 +1791,6 @@ GtkPopover {
     background-image: none;
     background-color: #1e1e1e;
     color: #93E0E3; }
-  GtkPopover:backdrop {
-    box-shadow: none; }
   GtkPopover.osd {
     box-shadow: 0 2px 7px 3px rgba(0, 0, 0, 0.5); }
     GtkPopover.osd > .toolbar .button {
@@ -3418,8 +3404,6 @@ GtkScrolledWindow GtkViewport.frame {
 ***************/
 .window-frame, .window-frame.csd.popup, .window-frame.csd.message-dialog {
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22), 0 0 0 1px transparent; }
-  .window-frame:backdrop, .window-frame.csd.popup:backdrop, .window-frame.csd.message-dialog:backdrop {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23), 0 0 0 1px transparent; }
 
 .window-frame {
   border: 0;
@@ -3886,15 +3870,8 @@ UnityDecoration {
     background-color: #1e1e1e;
     color: mix(#93E0E3,#1e1e1e,0.1);
     text-shadow: none; }
-    UnityDecoration.top:backdrop {
-      border: 1px solid mix(#151515,#93E0E3,0.12);
-      border-bottom: 0;
-      background-color: #1e1e1e;
-      color: mix(#93E0E3,#1e1e1e,0.4); }
   UnityDecoration.left, UnityDecoration.right, UnityDecoration.bottom {
     background-color: mix(#151515,#93E0E3,0.21); }
-    UnityDecoration.left:backdrop, UnityDecoration.right:backdrop, UnityDecoration.bottom:backdrop {
-      background-color: mix(#151515,#93E0E3,0.12); }
 
 UnityPanelWidget, .unity-panel {
   border: 0; }
