@@ -57,21 +57,21 @@
     #clock-applet-button,
     #tasklist-button,
     #showdesktop-button {
-        &, &:backdrop { @extend %panelbutton; }
+        & { @extend %panelbutton; }
     }
 
     panel-applet {
         border: 0;
 
         button {
-            &, &:backdrop { @extend %panelbutton; }
+            & { @extend %panelbutton; }
         }
     }
 
     clock-box,
     panel-applet > menubar,
     panel-toplevel .gnome-panel-menu-bar {
-        &, &:backdrop {
+        & {
             @extend %panel;
 
             menuitem {

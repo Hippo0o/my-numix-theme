@@ -9,7 +9,6 @@
         border-bottom: 1px solid shade($bg, ($contrast + .1));
         border-radius: 0;
 
-        &:backdrop { border-color: shade($bg, ($contrast + .1)); }
     }
 
     &.button {
@@ -22,8 +21,7 @@
         }
     }
 
-    &:indeterminate,
-    &:indeterminate:backdrop { color: mix($fg, $bg, .5); }
+    &:indeterminate { color: mix($fg, $bg, .5); }
 }
 
 
@@ -172,8 +170,6 @@
 
             &:hover { background-color: mix($fg_color, $base_color, .1); }
 
-            &:backdrop { background-color: $backdrop_menu_color; }
-
             &:disabled {
                 color: transparent;
                 background-color: transparent;
@@ -232,12 +228,10 @@
             border-style: solid;
         }
 
-        &:backdrop { box-shadow: none; }
-
         treeview.view {
-            &:hover, &:selected, &:selected:focus, &:backdrop:selected, &:backdrop:selected:focus { border-top-color: $selected_bg_color; }
+            &:hover, &:selected, &:selected:focus { border-top-color: $selected_bg_color; }
 
-            &, &:backdrop { border-top-color: shade($menu_bg_color, ($contrast + .4)); }
+            & { border-top-color: shade($menu_bg_color, ($contrast + .4)); }
         }
 
         view, .view, list {
@@ -247,7 +241,7 @@
                 color: $selected_fg_color;
             }
 
-            &, &:backdrop {
+            & {
                 background-color: shade($menu_bg_color, ($contrast + .5));
                 background-image: none;
                 color: $menu_fg_color;

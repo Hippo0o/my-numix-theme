@@ -10,7 +10,7 @@
         color: $text_color;
 
         &.view {
-            &, &:backdrop { @extend %undecorated_button; }
+            & { @extend %undecorated_button; }
         }
 
         &:selected {
@@ -23,7 +23,6 @@
             border-bottom: 1px solid transparentize($black, .9);
             border-radius: 0;
 
-            &:backdrop { border-color: transparentize($black, .9); }
         }
 
         &.button {
@@ -35,12 +34,6 @@
                 @extend %undecorated_button;
 
                 color: $fg_color;
-            }
-
-            &:backdrop {
-                @extend %undecorated_button;
-
-                color: alpha($backdrop_fg_color, .55);
             }
 
             &:disabled {
@@ -59,9 +52,6 @@
             color: $selected_bg_color;
         }
 
-        &:backdrop {
-            
-        }
     }
 
     /* gnome-calendar */

@@ -44,7 +44,7 @@
         > stack > scrolledwindow > viewport > box.vertical > frame > box.vertical {
             // reset $base_color;
             iconview.view {
-                &, &:backdrop {
+                & {
                     background-color: transparent;
                 }
 

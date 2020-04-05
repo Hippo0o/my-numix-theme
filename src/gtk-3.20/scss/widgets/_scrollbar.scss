@@ -23,12 +23,6 @@
         &.left { border-right: 1px solid $borders_color; }
         &.right { border-left: 1px solid $borders_color; }
 
-        &:backdrop {
-            background-color: $backdrop_scrollbar_bg_color;
-            border-color: $backdrop_borders_color;
-            transition: 400ms ease-in;
-        }
-
         slider {
             min-width: $_slider_normal_width;
             min-height: $_slider_normal_width;
@@ -39,7 +33,6 @@
 
             &:hover { background-color: $scrollbar_slider_hover_color; }
             &:hover:active { background-color: $scrollbar_slider_active_color; }
-            &:backdrop { background-color: $backdrop_scrollbar_slider_color; }
             &:disabled { background-color: transparent; }
         }
 
@@ -99,7 +92,6 @@
 
             &:hover { color: $scrollbar_slider_hover_color; }
             &:active, &:checked { color: $scrollbar_slider_active_color; }
-            &:backdrop { color: $backdrop_scrollbar_slider_color; }
         }
 
         // button icons

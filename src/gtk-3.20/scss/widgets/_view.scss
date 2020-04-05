@@ -8,11 +8,6 @@
         color: $text_color;
         background-color: $base_color;
 
-        &:backdrop {
-            
-            background-color: $backdrop_base_color;
-        }
-
         &:selected {
             &:focus, & {
                 @extend %selected_items;
@@ -77,19 +72,6 @@
             border-color: $bg_color;
             background-image: none;
         }
-
-        &:backdrop {
-            border-color: $backdrop_bg_color;
-            border-style: none solid solid none;
-            color: mix($backdrop_fg_color, $backdrop_bg_color, .5);
-            background-image: none;
-            background-color: $backdrop_base_color;
-
-            &:disabled {
-                border-color: $backdrop_bg_color;
-                background-image: none;
-            }
-        }
     }
 
     treeview.view {
@@ -110,7 +92,7 @@
                 border-radius: 0;
             }
 
-            &:backdrop, & {
+             & {
                 border-left-color: mix($selected_fg_color, $selected_bg_color, .5);
                 border-top-color: transparentize($fg_color, .9); // doesn't work unfortunatelly
             }
@@ -125,19 +107,12 @@
                
             }
 
-            &:backdrop { color: $backdrop_insensitive_color; }
         }
 
         &.separator {
             min-height: 2px;
             color: $bg_color;
 
-            &:backdrop { color: transparentize($bg_color, .9); }
-        }
-
-        &:backdrop {
-            border-left-color: mix($backdrop_fg_color, $backdrop_bg_color, .5);
-            border-top: $backdrop_bg_color;
         }
 
         &:drop(active) {
@@ -165,8 +140,6 @@
             }
 
             &:checked { -gtk-icon-source: -gtk-icontheme('pan-down-symbolic'); }
-
-            &:backdrop { color: mix($backdrop_base_color, $backdrop_fg_color, .7); }
         }
 
         &.progressbar { // progress bar in treeviews
@@ -193,16 +166,6 @@
 
             &:disabled { background-color: shade($selected_bg_color, 1.08);  }
 
-            &:backdrop {
-                @if $variant == 'light' {
-                    color: $backdrop_base_color;
-                } @else {
-                    border-color: $backdrop_base_color;
-                }
-
-                background-image: none;
-                box-shadow: none;
-            }
         }
 
         &.trough { // progress bar trough in treeviews
@@ -250,7 +213,7 @@
                 }
             }
 
-            button:last-child { &:backdrop, & { border-right-style: none; } }
+            button:last-child {  & { border-right-style: none; } }
         }
 
         button.dnd,
@@ -296,7 +259,6 @@
 
         &.flat { border-style: none; }
 
-        &:backdrop { border-color: $backdrop_borders_color; }
     }
 
     /* avoid double borders when a viewport is packed into a GtkScrolledWindow */

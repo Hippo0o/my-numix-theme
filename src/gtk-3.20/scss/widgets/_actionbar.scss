@@ -65,7 +65,7 @@
             }
 
             .selection-menu {
-                &:backdrop, & {
+                 & {
                     color: shade($selected_bg_color, $contrast);
                     background-color: transparent;
                     background-image: none;

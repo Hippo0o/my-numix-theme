@@ -125,7 +125,7 @@ GtkLabel:insensitive {
 /*********
  ! Buttons
 **********/
-.button, .button.default, .toolbar .button, .header-bar .button, .suggested-action.button, .selection-mode.header-bar .button.suggested-action, .selection-mode.toolbar .button.suggested-action, .destructive-action.button, .selection-mode.header-bar .button, .selection-mode.toolbar .button, .info .button, .warning .button, .question .button, .error .button, GtkPopover .button, GtkModelButton.button, GtkModelButton.button:backdrop, .app-notification .button, .app-notification.frame .button, .osd.button, .osd .button,
+.button, .button.default, .toolbar .button, .header-bar .button, .suggested-action.button, .selection-mode.header-bar .button.suggested-action, .selection-mode.toolbar .button.suggested-action, .destructive-action.button, .selection-mode.header-bar .button, .selection-mode.toolbar .button, .info .button, .warning .button, .question .button, .error .button, GtkPopover .button, GtkModelButton.button, .app-notification .button, .app-notification.frame .button, .osd.button, .osd .button,
 #XfceNotifyWindow.button,
 #XfceNotifyWindow .button, NemoPathbarButton {
   padding: 5px 7px;
@@ -136,11 +136,11 @@ GtkLabel:insensitive {
   outline-color: transparent;
   -GtkWidget-focus-padding: 1;
   -GtkWidget-focus-line-width: 0; }
-  .button:focus, .selection-mode.header-bar .button:focus, .selection-mode.toolbar .button:focus, GtkModelButton.button:focus:backdrop, .app-notification.frame .button:focus,
+  .button:focus, .selection-mode.header-bar .button:focus, .selection-mode.toolbar .button:focus, .app-notification.frame .button:focus,
   #XfceNotifyWindow.button:focus,
-  #XfceNotifyWindow .button:focus, NemoPathbarButton:focus, .button:hover, .selection-mode.header-bar .button:hover, .selection-mode.toolbar .button:hover, GtkModelButton.button:hover:backdrop, .app-notification.frame .button:hover,
+  #XfceNotifyWindow .button:focus, NemoPathbarButton:focus, .button:hover, .selection-mode.header-bar .button:hover, .selection-mode.toolbar .button:hover, .app-notification.frame .button:hover,
   #XfceNotifyWindow.button:hover,
-  #XfceNotifyWindow .button:hover, NemoPathbarButton:hover, .button:active, .selection-mode.header-bar .button:active, .selection-mode.toolbar .button:active, GtkModelButton.button:active:backdrop, .app-notification.frame .button:active,
+  #XfceNotifyWindow .button:hover, NemoPathbarButton:hover, .button:active, .selection-mode.header-bar .button:active, .selection-mode.toolbar .button:active, .app-notification.frame .button:active,
   #XfceNotifyWindow.button:active,
   #XfceNotifyWindow .button:active, NemoPathbarButton:active {
     transition: none; }
@@ -1910,79 +1910,79 @@ GtkPopover {
     font-size: 80%;
     font-weight: bold; }
 
-GtkModelButton.button, GtkModelButton.button:backdrop {
+GtkModelButton.button {
   background-color: rgba(0, 0, 0, 0);
   background-image: none;
   border-color: rgba(0, 0, 0, 0.22);
   color: currentColor;
   box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 0.22); }
-  GtkModelButton.button:focus, GtkModelButton.button:hover, GtkModelButton.button:backdrop:focus, GtkModelButton.button:backdrop:hover {
+  GtkModelButton.button:focus, GtkModelButton.button:hover {
     border-color: rgba(0, 0, 0, 0.22); }
-  GtkModelButton.button:active, GtkModelButton.button:active:hover, GtkModelButton.button:active:focus, GtkModelButton.button:active:hover:focus, GtkModelButton.button:checked, GtkModelButton.button:checked:hover, GtkModelButton.button:checked:focus, GtkModelButton.button:checked:hover:focus, GtkModelButton.button:backdrop:active, GtkModelButton.button:backdrop:active:hover, GtkModelButton.button:backdrop:active:focus, GtkModelButton.button:backdrop:active:hover:focus, GtkModelButton.button:backdrop:checked, GtkModelButton.button:backdrop:checked:hover, GtkModelButton.button:backdrop:checked:focus, GtkModelButton.button:backdrop:checked:hover:focus {
+  GtkModelButton.button:active, GtkModelButton.button:active:hover, GtkModelButton.button:active:focus, GtkModelButton.button:active:hover:focus, GtkModelButton.button:checked, GtkModelButton.button:checked:hover, GtkModelButton.button:checked:focus, GtkModelButton.button:checked:hover:focus {
     border-color: rgba(0, 0, 0, 0.22); }
-  GtkModelButton.button:insensitive, GtkModelButton.button:backdrop:insensitive {
+  GtkModelButton.button:insensitive {
     border-color: rgba(0, 0, 0, 0.22); }
-  GtkModelButton.button:active:insensitive, GtkModelButton.button:checked:insensitive, GtkModelButton.button:backdrop:active:insensitive, GtkModelButton.button:backdrop:checked:insensitive {
+  GtkModelButton.button:active:insensitive, GtkModelButton.button:checked:insensitive {
     border-color: rgba(0, 0, 0, 0.22); }
-  GtkModelButton.button.flat, GtkModelButton.button:backdrop.flat {
+  GtkModelButton.button.flat {
     border-color: rgba(0, 0, 0, 0);
     background-color: rgba(0, 0, 0, 0);
     background-image: none;
     box-shadow: none; }
-  GtkModelButton.button:focus, GtkModelButton.button:hover, GtkModelButton.button.flat:focus, GtkModelButton.button.flat:hover, GtkModelButton.button:backdrop:focus, GtkModelButton.button:backdrop:hover, GtkModelButton.button:backdrop.flat:focus, GtkModelButton.button:backdrop.flat:hover {
+  GtkModelButton.button:focus, GtkModelButton.button:hover, GtkModelButton.button.flat:focus, GtkModelButton.button.flat:hover {
     background-color: rgba(0, 0, 0, 0);
     background-image: none;
     border-color: rgba(0, 0, 0, 0.3);
     box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 0.42); }
-    GtkModelButton.button:focus:focus, GtkModelButton.button:focus:hover, GtkModelButton.button:hover:focus, GtkModelButton.button:hover:hover, GtkModelButton.button.flat:focus:focus, GtkModelButton.button.flat:focus:hover, GtkModelButton.button.flat:hover:focus, GtkModelButton.button.flat:hover:hover, GtkModelButton.button:backdrop:focus:focus, GtkModelButton.button:backdrop:focus:hover, GtkModelButton.button:backdrop:hover:focus, GtkModelButton.button:backdrop:hover:hover, GtkModelButton.button:backdrop.flat:focus:focus, GtkModelButton.button:backdrop.flat:focus:hover, GtkModelButton.button:backdrop.flat:hover:focus, GtkModelButton.button:backdrop.flat:hover:hover {
+    GtkModelButton.button:focus:focus, GtkModelButton.button:focus:hover, GtkModelButton.button:hover:focus, GtkModelButton.button:hover:hover, GtkModelButton.button.flat:focus:focus, GtkModelButton.button.flat:focus:hover, GtkModelButton.button.flat:hover:focus, GtkModelButton.button.flat:hover:hover {
       border-color: rgba(0, 0, 0, 0.3); }
-    GtkModelButton.button:focus:active, GtkModelButton.button:focus:active:hover, GtkModelButton.button:focus:active:focus, GtkModelButton.button:focus:active:hover:focus, GtkModelButton.button:focus:checked, GtkModelButton.button:focus:checked:hover, GtkModelButton.button:focus:checked:focus, GtkModelButton.button:focus:checked:hover:focus, GtkModelButton.button:hover:active, GtkModelButton.button:hover:active:hover, GtkModelButton.button:hover:active:focus, GtkModelButton.button:hover:active:hover:focus, GtkModelButton.button:hover:checked, GtkModelButton.button:hover:checked:hover, GtkModelButton.button:hover:checked:focus, GtkModelButton.button:hover:checked:hover:focus, GtkModelButton.button.flat:focus:active, GtkModelButton.button.flat:focus:active:hover, GtkModelButton.button.flat:focus:active:focus, GtkModelButton.button.flat:focus:active:hover:focus, GtkModelButton.button.flat:focus:checked, GtkModelButton.button.flat:focus:checked:hover, GtkModelButton.button.flat:focus:checked:focus, GtkModelButton.button.flat:focus:checked:hover:focus, GtkModelButton.button.flat:hover:active, GtkModelButton.button.flat:hover:active:hover, GtkModelButton.button.flat:hover:active:focus, GtkModelButton.button.flat:hover:active:hover:focus, GtkModelButton.button.flat:hover:checked, GtkModelButton.button.flat:hover:checked:hover, GtkModelButton.button.flat:hover:checked:focus, GtkModelButton.button.flat:hover:checked:hover:focus, GtkModelButton.button:backdrop:focus:active, GtkModelButton.button:backdrop:focus:active:hover, GtkModelButton.button:backdrop:focus:active:focus, GtkModelButton.button:backdrop:focus:active:hover:focus, GtkModelButton.button:backdrop:focus:checked, GtkModelButton.button:backdrop:focus:checked:hover, GtkModelButton.button:backdrop:focus:checked:focus, GtkModelButton.button:backdrop:focus:checked:hover:focus, GtkModelButton.button:backdrop:hover:active, GtkModelButton.button:backdrop:hover:active:hover, GtkModelButton.button:backdrop:hover:active:focus, GtkModelButton.button:backdrop:hover:active:hover:focus, GtkModelButton.button:backdrop:hover:checked, GtkModelButton.button:backdrop:hover:checked:hover, GtkModelButton.button:backdrop:hover:checked:focus, GtkModelButton.button:backdrop:hover:checked:hover:focus, GtkModelButton.button:backdrop.flat:focus:active, GtkModelButton.button:backdrop.flat:focus:active:hover, GtkModelButton.button:backdrop.flat:focus:active:focus, GtkModelButton.button:backdrop.flat:focus:active:hover:focus, GtkModelButton.button:backdrop.flat:focus:checked, GtkModelButton.button:backdrop.flat:focus:checked:hover, GtkModelButton.button:backdrop.flat:focus:checked:focus, GtkModelButton.button:backdrop.flat:focus:checked:hover:focus, GtkModelButton.button:backdrop.flat:hover:active, GtkModelButton.button:backdrop.flat:hover:active:hover, GtkModelButton.button:backdrop.flat:hover:active:focus, GtkModelButton.button:backdrop.flat:hover:active:hover:focus, GtkModelButton.button:backdrop.flat:hover:checked, GtkModelButton.button:backdrop.flat:hover:checked:hover, GtkModelButton.button:backdrop.flat:hover:checked:focus, GtkModelButton.button:backdrop.flat:hover:checked:hover:focus {
+    GtkModelButton.button:focus:active, GtkModelButton.button:focus:active:hover, GtkModelButton.button:focus:active:focus, GtkModelButton.button:focus:active:hover:focus, GtkModelButton.button:focus:checked, GtkModelButton.button:focus:checked:hover, GtkModelButton.button:focus:checked:focus, GtkModelButton.button:focus:checked:hover:focus, GtkModelButton.button:hover:active, GtkModelButton.button:hover:active:hover, GtkModelButton.button:hover:active:focus, GtkModelButton.button:hover:active:hover:focus, GtkModelButton.button:hover:checked, GtkModelButton.button:hover:checked:hover, GtkModelButton.button:hover:checked:focus, GtkModelButton.button:hover:checked:hover:focus, GtkModelButton.button.flat:focus:active, GtkModelButton.button.flat:focus:active:hover, GtkModelButton.button.flat:focus:active:focus, GtkModelButton.button.flat:focus:active:hover:focus, GtkModelButton.button.flat:focus:checked, GtkModelButton.button.flat:focus:checked:hover, GtkModelButton.button.flat:focus:checked:focus, GtkModelButton.button.flat:focus:checked:hover:focus, GtkModelButton.button.flat:hover:active, GtkModelButton.button.flat:hover:active:hover, GtkModelButton.button.flat:hover:active:focus, GtkModelButton.button.flat:hover:active:hover:focus, GtkModelButton.button.flat:hover:checked, GtkModelButton.button.flat:hover:checked:hover, GtkModelButton.button.flat:hover:checked:focus, GtkModelButton.button.flat:hover:checked:hover:focus {
       border-color: rgba(0, 0, 0, 0.3); }
-    GtkModelButton.button:focus:insensitive, GtkModelButton.button:hover:insensitive, GtkModelButton.button.flat:focus:insensitive, GtkModelButton.button.flat:hover:insensitive, GtkModelButton.button:backdrop:focus:insensitive, GtkModelButton.button:backdrop:hover:insensitive, GtkModelButton.button:backdrop.flat:focus:insensitive, GtkModelButton.button:backdrop.flat:hover:insensitive {
+    GtkModelButton.button:focus:insensitive, GtkModelButton.button:hover:insensitive, GtkModelButton.button.flat:focus:insensitive, GtkModelButton.button.flat:hover:insensitive {
       border-color: rgba(0, 0, 0, 0.3); }
-    GtkModelButton.button:focus:active:insensitive, GtkModelButton.button:focus:checked:insensitive, GtkModelButton.button:hover:active:insensitive, GtkModelButton.button:hover:checked:insensitive, GtkModelButton.button.flat:focus:active:insensitive, GtkModelButton.button.flat:focus:checked:insensitive, GtkModelButton.button.flat:hover:active:insensitive, GtkModelButton.button.flat:hover:checked:insensitive, GtkModelButton.button:backdrop:focus:active:insensitive, GtkModelButton.button:backdrop:focus:checked:insensitive, GtkModelButton.button:backdrop:hover:active:insensitive, GtkModelButton.button:backdrop:hover:checked:insensitive, GtkModelButton.button:backdrop.flat:focus:active:insensitive, GtkModelButton.button:backdrop.flat:focus:checked:insensitive, GtkModelButton.button:backdrop.flat:hover:active:insensitive, GtkModelButton.button:backdrop.flat:hover:checked:insensitive {
+    GtkModelButton.button:focus:active:insensitive, GtkModelButton.button:focus:checked:insensitive, GtkModelButton.button:hover:active:insensitive, GtkModelButton.button:hover:checked:insensitive, GtkModelButton.button.flat:focus:active:insensitive, GtkModelButton.button.flat:focus:checked:insensitive, GtkModelButton.button.flat:hover:active:insensitive, GtkModelButton.button.flat:hover:checked:insensitive {
       border-color: rgba(0, 0, 0, 0.3); }
-  GtkModelButton.button:active, GtkModelButton.button:checked, GtkModelButton.button.flat:active, GtkModelButton.button.flat:checked, GtkModelButton.button:backdrop:active, GtkModelButton.button:backdrop:checked, GtkModelButton.button:backdrop.flat:active, GtkModelButton.button:backdrop.flat:checked {
+  GtkModelButton.button:active, GtkModelButton.button:checked, GtkModelButton.button.flat:active, GtkModelButton.button.flat:checked {
     background-color: rgba(0, 0, 0, 0);
     background-image: none;
     color: #fff;
     box-shadow: inset 1px 0 rgba(0, 0, 0, 0.06), inset 0 1px rgba(0, 0, 0, 0.07), inset -1px 0 rgba(0, 0, 0, 0.06), inset 0 -1px rgba(0, 0, 0, 0.05); }
-    GtkModelButton.button:active:focus, GtkModelButton.button:active:hover, GtkModelButton.button:checked:focus, GtkModelButton.button:checked:hover, GtkModelButton.button.flat:active:focus, GtkModelButton.button.flat:active:hover, GtkModelButton.button.flat:checked:focus, GtkModelButton.button.flat:checked:hover, GtkModelButton.button:backdrop:active:focus, GtkModelButton.button:backdrop:active:hover, GtkModelButton.button:backdrop:checked:focus, GtkModelButton.button:backdrop:checked:hover, GtkModelButton.button:backdrop.flat:active:focus, GtkModelButton.button:backdrop.flat:active:hover, GtkModelButton.button:backdrop.flat:checked:focus, GtkModelButton.button:backdrop.flat:checked:hover {
+    GtkModelButton.button:active:focus, GtkModelButton.button:active:hover, GtkModelButton.button:checked:focus, GtkModelButton.button:checked:hover, GtkModelButton.button.flat:active:focus, GtkModelButton.button.flat:active:hover, GtkModelButton.button.flat:checked:focus, GtkModelButton.button.flat:checked:hover {
       background-color: rgba(0, 0, 0, 0);
       background-image: none;
       color: #fff; }
-  GtkModelButton.button:focus, GtkModelButton.button:hover, GtkModelButton.button.flat:focus, GtkModelButton.button.flat:hover, GtkModelButton.button:backdrop:focus, GtkModelButton.button:backdrop:hover, GtkModelButton.button:backdrop.flat:focus, GtkModelButton.button:backdrop.flat:hover {
+  GtkModelButton.button:focus, GtkModelButton.button:hover, GtkModelButton.button.flat:focus, GtkModelButton.button.flat:hover {
     color: currentColor; }
-  GtkModelButton.button:active:insensitive, GtkModelButton.button:checked:insensitive, GtkModelButton.button.flat:active:insensitive, GtkModelButton.button.flat:checked:insensitive, GtkModelButton.button:backdrop:active:insensitive, GtkModelButton.button:backdrop:checked:insensitive, GtkModelButton.button:backdrop.flat:active:insensitive, GtkModelButton.button:backdrop.flat:checked:insensitive {
+  GtkModelButton.button:active:insensitive, GtkModelButton.button:checked:insensitive, GtkModelButton.button.flat:active:insensitive, GtkModelButton.button.flat:checked:insensitive {
     background-color: rgba(0, 0, 0, 0);
     background-image: none;
     color: currentColor;
     box-shadow: none; }
-  GtkModelButton.button:insensitive:insensitive, GtkModelButton.button.flat:insensitive:insensitive, GtkModelButton.button:backdrop:insensitive:insensitive, GtkModelButton.button:backdrop.flat:insensitive:insensitive {
+  GtkModelButton.button:insensitive:insensitive, GtkModelButton.button.flat:insensitive:insensitive {
     background-color: rgba(0, 0, 0, 0);
     background-image: none;
     color: mix(transparent,currentColor,0.5);
     box-shadow: none; }
-  GtkModelButton.button:active, GtkModelButton.button:backdrop:active {
+  GtkModelButton.button:active {
     color: currentColor; }
-  GtkModelButton.button.flat:insensitive:insensitive, GtkModelButton.button:backdrop.flat:insensitive:insensitive {
+  GtkModelButton.button.flat:insensitive:insensitive {
     background-color: transparent;
     background-image: none;
     color: mix(transparent,currentColor,0.5);
     box-shadow: none; }
-  GtkModelButton.button.separator, GtkModelButton.button .separator, GtkModelButton.button:backdrop.separator, GtkModelButton.button:backdrop .separator {
+  GtkModelButton.button.separator, GtkModelButton.button .separator {
     border: 1px solid currentColor;
     color: rgba(0, 0, 0, 0); }
-    GtkModelButton.button.separator:insensitive, GtkModelButton.button .separator:insensitive, GtkModelButton.button:backdrop.separator:insensitive, GtkModelButton.button:backdrop .separator:insensitive {
+    GtkModelButton.button.separator:insensitive, GtkModelButton.button .separator:insensitive {
       color: rgba(0, 0, 0, 0); }
-  GtkModelButton.button:focus:hover, GtkModelButton.button.flat:checked:hover, GtkModelButton.button:active:hover, GtkModelButton.button:hover, GtkModelButton.button:selected, GtkModelButton.button:backdrop:focus:hover, GtkModelButton.button:backdrop.flat:checked:hover, GtkModelButton.button:backdrop:active:hover, GtkModelButton.button:backdrop:hover, GtkModelButton.button:backdrop:selected {
+  GtkModelButton.button:focus:hover, GtkModelButton.button.flat:checked:hover, GtkModelButton.button:active:hover, GtkModelButton.button:hover, GtkModelButton.button:selected {
     background-image: none;
     background-color: #93E0E3;
     color: #1e1e1e;
     box-shadow: none; }
-  GtkModelButton.button.flat:checked, GtkModelButton.button:backdrop.flat:checked {
+  GtkModelButton.button.flat:checked {
     box-shadow: none; }
-  GtkModelButton.button.flat, GtkModelButton.button.flat:hover, GtkModelButton.button:backdrop.flat, GtkModelButton.button:backdrop.flat:hover {
+  GtkModelButton.button.flat, GtkModelButton.button.flat:hover {
     transition: none; }
 
 /***************
@@ -2707,14 +2707,6 @@ GtkOverlay.osd {
   background-color: transparent;
   border: 0;
   box-shadow: none; }
-  .overshoot.top:backdrop {
-    background-image: -gtk-gradient(radial, center top, 0, center top, 0.5, to(rgba(147, 224, 227, 0.35)), to(rgba(147, 224, 227, 0.25)));
-    background-size: 100% 5%;
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-color: transparent;
-    border: 0;
-    box-shadow: none; }
 .overshoot.bottom {
   background-image: -gtk-gradient(radial, center bottom, 0, center bottom, 0.5, to(rgba(147, 224, 227, 0.35)), to(rgba(147, 224, 227, 0.25))), -gtk-gradient(radial, center bottom, 0, center bottom, 0.6, from(rgba(147, 224, 227, 0.2)), to(rgba(147, 224, 227, 0)));
   background-size: 100% 5%, 100% 100%;
@@ -2723,14 +2715,6 @@ GtkOverlay.osd {
   background-color: transparent;
   border: 0;
   box-shadow: none; }
-  .overshoot.bottom:backdrop {
-    background-image: -gtk-gradient(radial, center bottom, 0, center bottom, 0.5, to(rgba(147, 224, 227, 0.35)), to(rgba(147, 224, 227, 0.25)));
-    background-size: 100% 5%;
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    background-color: transparent;
-    border: 0;
-    box-shadow: none; }
 .overshoot.left {
   background-image: -gtk-gradient(radial, left center, 0, left center, 0.5, to(rgba(147, 224, 227, 0.35)), to(rgba(147, 224, 227, 0.25))), -gtk-gradient(radial, left center, 0, left center, 0.6, from(rgba(147, 224, 227, 0.2)), to(rgba(147, 224, 227, 0)));
   background-size: 5% 100%, 100% 100%;
@@ -2739,14 +2723,6 @@ GtkOverlay.osd {
   background-color: transparent;
   border: 0;
   box-shadow: none; }
-  .overshoot.left:backdrop {
-    background-image: -gtk-gradient(radial, left center, 0, left center, 0.5, to(rgba(147, 224, 227, 0.35)), to(rgba(147, 224, 227, 0.25)));
-    background-size: 5% 100%;
-    background-repeat: no-repeat;
-    background-position: left center;
-    background-color: transparent;
-    border: 0;
-    box-shadow: none; }
 .overshoot.right {
   background-image: -gtk-gradient(radial, right center, 0, right center, 0.5, to(rgba(147, 224, 227, 0.35)), to(rgba(147, 224, 227, 0.25))), -gtk-gradient(radial, right center, 0, right center, 0.6, from(rgba(147, 224, 227, 0.2)), to(rgba(147, 224, 227, 0)));
   background-size: 5% 100%, 100% 100%;
@@ -2755,14 +2731,6 @@ GtkOverlay.osd {
   background-color: transparent;
   border: 0;
   box-shadow: none; }
-  .overshoot.right:backdrop {
-    background-image: -gtk-gradient(radial, right center, 0, right center, 0.5, to(rgba(147, 224, 227, 0.35)), to(rgba(147, 224, 227, 0.25)));
-    background-size: 5% 100%;
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-color: transparent;
-    border: 0;
-    box-shadow: none; }
 
 .undershoot.top {
   background-color: transparent;
@@ -3175,11 +3143,6 @@ GtkPaned {
   -gtk-icon-source: -gtk-scaled(url("../assets/grid-selection-checked-dark.png"), url("../assets/grid-selection-checked-dark@2.png"));
   background-color: transparent; }
 
-.view.content-view.check:backdrop:not(list), GtkHTML.content-view.check:backdrop:not(list) {
-  icon-shadow: none;
-  -gtk-icon-source: -gtk-scaled(url("../assets/grid-selection-unchecked-dark.png"), url("../assets/grid-selection-unchecked-dark@2.png"));
-  background-color: transparent; }
-
 .view.content-view.check:checked:not(list), GtkHTML.content-view.check:checked:not(list) {
   icon-shadow: none;
   -gtk-icon-source: -gtk-scaled(url("../assets/grid-selection-checked-dark.png"), url("../assets/grid-selection-checked-dark@2.png"));
@@ -3191,11 +3154,6 @@ GtkPaned {
   background-color: transparent; }
 
 .view.content-view.check:checked:active:not(list), GtkHTML.content-view.check:checked:active:not(list) {
-  icon-shadow: none;
-  -gtk-icon-source: -gtk-scaled(url("../assets/grid-selection-checked-dark.png"), url("../assets/grid-selection-checked-dark@2.png"));
-  background-color: transparent; }
-
-.view.content-view.check:backdrop:checked:not(list), GtkHTML.content-view.check:backdrop:checked:not(list) {
   icon-shadow: none;
   -gtk-icon-source: -gtk-scaled(url("../assets/grid-selection-checked-dark.png"), url("../assets/grid-selection-checked-dark@2.png"));
   background-color: transparent; }
@@ -3330,7 +3288,7 @@ GtkTreeView {
   -GtkTreeView-vertical-separator: 0;
   outline-offset: -1px;
   border-top-color: #1b1b1b; }
-  GtkTreeView:hover, GtkTreeView:selected, GtkTreeView:selected:focus, GtkTreeView:backdrop:selected, GtkTreeView:backdrop:selected:focus {
+  GtkTreeView:hover, GtkTreeView:selected, GtkTreeView:selected:focus:selected {
     border-top-color: #93E0E3; }
   GtkTreeView.dnd {
     border: 1px solid #93E0E3; }

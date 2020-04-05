@@ -5,7 +5,7 @@
 @include exports("cinnamon-settings") {
     .cs-category-view {
         &, .view {
-            &, &:backdrop {
+            & {
                 background-color: transparent;
             }
 

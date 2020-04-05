@@ -83,11 +83,9 @@ $suffix: if($variant == "dark", "-dark", "");
     @each $s,$as in ('', '-unchecked'),
                   (':hover', '-unchecked'),
                   (':active', '-checked'),
-                  (':backdrop', '-unchecked'),
                   (':checked', '-checked'),
                   (':checked:hover', '-checked'),
-                  (':checked:active', '-checked'),
-                  (':backdrop:checked', '-checked') {
+                  (':checked:active', '-checked') {
         .view.content-view.check#{$s}:not(list) {
             -gtk-icon-shadow: none;
             -gtk-icon-source: -gtk-scaled(url("../assets/grid-selection#{$as}#{$suffix}.png"),

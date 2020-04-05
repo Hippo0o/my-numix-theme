@@ -65,8 +65,6 @@
             min-height: 34px;
         }
 
-        &:backdrop { transition: 200ms ease-out; }
-
         trough {
             @include linear-gradient(shade($bg_color, 1.08), to top);
 
@@ -319,7 +317,7 @@
                 }
 
                 slider {
-                    &:hover, &:backdrop, &:disabled, &:backdrop:disabled, & {
+                    &:hover,  &:disabled, & {
                         margin-bottom: 0;
                         margin-top: 0;
                     }
@@ -336,7 +334,7 @@
                     }
 
                     slider {
-                        &:hover, &:backdrop, &:disabled, &:backdrop:disabled, & {
+                        &:hover,  &:disabled, & {
                             margin-left: 0;
                             margin-right: 0;
                         }
@@ -352,7 +350,7 @@
                     }
 
                     slider {
-                        &:hover, &:backdrop, &:disabled, &:backdrop:disabled, & {
+                        &:hover,  &:disabled, & {
                             margin-right: 0;
                             margin-left: 0;
                         }

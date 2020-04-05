@@ -85,25 +85,21 @@
     &.top {
         @include overshoot(top);
 
-        &:backdrop { @include overshoot(top, backdrop); }
     }
 
     &.bottom {
         @include overshoot(bottom);
 
-        &:backdrop { @include overshoot(bottom, backdrop); }
     }
 
     &.left {
         @include overshoot(left);
 
-        &:backdrop { @include overshoot(left, backdrop); }
     }
 
     &.right {
         @include overshoot(right);
 
-        &:backdrop { @include overshoot(right, backdrop); }
     }
 }
 

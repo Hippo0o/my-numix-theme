@@ -241,7 +241,7 @@
     }
 
     GtkModelButton.button {
-        &, &:backdrop {
+        & {
             @include button(transparent, currentColor);
 
             &:focus:hover, &.flat:checked:hover, &:active:hover, &:hover, &:selected {

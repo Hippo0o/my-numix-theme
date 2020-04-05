@@ -120,7 +120,7 @@
         outline-offset: -1px;
         border-top-color: shade($menu_bg_color, ($contrast + .1));
 
-        &:hover, &:selected, &:selected:focus, &:backdrop:selected, &:backdrop:selected:focus { border-top-color: $selected_bg_color; }
+        &:hover, &:selected, &:selected:focus:selected { border-top-color: $selected_bg_color; }
 
         &.dnd { border: 1px solid $selected_bg_color; }
 

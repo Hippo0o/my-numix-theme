@@ -4,7 +4,7 @@
 
 @include exports("nautilus") {
     .nautilus-desktop, .nautilus-desktop * {
-        &, &:backdrop {
+        & {
             color: $white;
             text-shadow: 1px 1px $black;
 

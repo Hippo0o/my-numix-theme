@@ -22,12 +22,6 @@
             border-right-style: none;
         }
 
-        &:backdrop {
-            background-color: $backdrop_sidebar_bg_color;
-            border-color: $backdrop_borders_color;
-            transition: 200ms ease-out;
-        }
-
         .frame, frame { border-width: 0; }
 
         list { background-color: transparent; }
@@ -110,8 +104,7 @@
                 border-radius: 100%;
                 -gtk-outline-radius: 100%;
 
-                &:not(:hover):not(:active),
-                &:backdrop {
+                &:not(:hover):not(:active){
                     > image { opacity: $_placesidebar_icons_opacity; }
                 }
             }
@@ -162,7 +155,6 @@
 
             &:selected { background-image: image($selected_bg_color); } // FIXME is this needed?
 
-            &:backdrop { background-image: image($backdrop_borders_color); }
 
             &.wide {
                 min-width: 5px;
@@ -171,11 +163,6 @@
                 background-image: image(border_normal($bg_color)), image(border_normal($bg_color));
                 background-size: 1px 1px, 1px 1px;
 
-                &:backdrop {
-                    background-color: $backdrop_bg_color;
-                    background-image: image($backdrop_borders_color),
-                                      image($backdrop_borders_color);
-              }
            }
         }
 
