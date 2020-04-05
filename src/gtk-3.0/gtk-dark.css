@@ -3288,7 +3288,7 @@ GtkTreeView {
   -GtkTreeView-vertical-separator: 0;
   outline-offset: -1px;
   border-top-color: #1b1b1b; }
-  GtkTreeView:hover, GtkTreeView:selected, GtkTreeView:selected:focus:selected {
+  GtkTreeView:hover, GtkTreeView:selected, GtkTreeView:selected:focus {
     border-top-color: #93E0E3; }
   GtkTreeView.dnd {
     border: 1px solid #93E0E3; }
