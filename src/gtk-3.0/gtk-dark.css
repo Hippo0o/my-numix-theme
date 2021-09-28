@@ -26,6 +26,7 @@
 @define-color success_color #4caf50;
 @define-color warning_color #ef6c00;
 @define-color error_color #f44336;
+@define-color text_view_bg #202020;
 /* widget colors */
 @define-color titlebar_bg_color @dark_bg_color;
 @define-color titlebar_fg_color @dark_fg_color;

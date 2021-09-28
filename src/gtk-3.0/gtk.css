@@ -26,6 +26,7 @@
 @define-color success_color #4caf50;
 @define-color warning_color #ef6c00;
 @define-color error_color #f44336;
+@define-color text_view_bg #202020;
 /* widget colors */
 @define-color titlebar_bg_color @dark_bg_color;
 @define-color titlebar_fg_color @dark_fg_color;
@@ -3070,17 +3071,17 @@ GtkPaned {
 
 .radio {
   background-image: none;
-  -gtk-icon-source: -gtk-scaled(url("../assets/radio-unchecked.png"), url("../assets/radio-unchecked@2.png")); }
+  -gtk-icon-source: -gtk-scaled(url("../assets/radio-unchecked-dark.png"), url("../assets/radio-unchecked-dark@2.png")); }
   .radio:insensitive {
-    -gtk-icon-source: -gtk-scaled(url("../assets/radio-unchecked-insensitive.png"), url("../assets/radio-unchecked-insensitive@2.png")); }
+    -gtk-icon-source: -gtk-scaled(url("../assets/radio-unchecked-insensitive-dark.png"), url("../assets/radio-unchecked-insensitive-dark@2.png")); }
   .radio:checked, .radio:active {
-    -gtk-icon-source: -gtk-scaled(url("../assets/radio-checked.png"), url("../assets/radio-checked@2.png")); }
+    -gtk-icon-source: -gtk-scaled(url("../assets/radio-checked-dark.png"), url("../assets/radio-checked-dark@2.png")); }
     .radio:checked:insensitive, .radio:active:insensitive {
-      -gtk-icon-source: -gtk-scaled(url("../assets/radio-checked-insensitive.png"), url("../assets/radio-checked-insensitive@2.png")); }
+      -gtk-icon-source: -gtk-scaled(url("../assets/radio-checked-insensitive-dark.png"), url("../assets/radio-checked-insensitive-dark@2.png")); }
   .radio:inconsistent {
-    -gtk-icon-source: -gtk-scaled(url("../assets/radio-mixed.png"), url("../assets/radio-mixed@2.png")); }
+    -gtk-icon-source: -gtk-scaled(url("../assets/radio-mixed-dark.png"), url("../assets/radio-mixed-dark@2.png")); }
     .radio:inconsistent:insensitive {
-      -gtk-icon-source: -gtk-scaled(url("../assets/radio-mixed-insensitive.png"), url("../assets/radio-mixed-insensitive@2.png")); }
+      -gtk-icon-source: -gtk-scaled(url("../assets/radio-mixed-insensitive-dark.png"), url("../assets/radio-mixed-insensitive-dark@2.png")); }
   .radio.menuitem {
     -gtk-icon-source: -gtk-scaled(url("../assets/menuitem-radio-checked-insensitive.png"), url("../assets/menuitem-radio-checked-insensitive@2.png")); }
     .radio.menuitem:insensitive {
@@ -3100,17 +3101,17 @@ GtkPaned {
 
 .check {
   background-image: none;
-  -gtk-icon-source: -gtk-scaled(url("../assets/checkbox-unchecked.png"), url("../assets/checkbox-unchecked@2.png")); }
+  -gtk-icon-source: -gtk-scaled(url("../assets/checkbox-unchecked-dark.png"), url("../assets/checkbox-unchecked-dark@2.png")); }
   .check:insensitive {
-    -gtk-icon-source: -gtk-scaled(url("../assets/checkbox-unchecked-insensitive.png"), url("../assets/checkbox-unchecked-insensitive@2.png")); }
+    -gtk-icon-source: -gtk-scaled(url("../assets/checkbox-unchecked-insensitive-dark.png"), url("../assets/checkbox-unchecked-insensitive-dark@2.png")); }
   .check:checked, .check:active {
-    -gtk-icon-source: -gtk-scaled(url("../assets/checkbox-checked.png"), url("../assets/checkbox-checked@2.png")); }
+    -gtk-icon-source: -gtk-scaled(url("../assets/checkbox-checked-dark.png"), url("../assets/checkbox-checked-dark@2.png")); }
     .check:checked:insensitive, .check:active:insensitive {
-      -gtk-icon-source: -gtk-scaled(url("../assets/checkbox-checked-insensitive.png"), url("../assets/checkbox-checked-insensitive@2.png")); }
+      -gtk-icon-source: -gtk-scaled(url("../assets/checkbox-checked-insensitive-dark.png"), url("../assets/checkbox-checked-insensitive-dark@2.png")); }
   .check:inconsistent {
-    -gtk-icon-source: -gtk-scaled(url("../assets/checkbox-mixed.png"), url("../assets/checkbox-mixed@2.png")); }
+    -gtk-icon-source: -gtk-scaled(url("../assets/checkbox-mixed-dark.png"), url("../assets/checkbox-mixed-dark@2.png")); }
     .check:inconsistent:insensitive {
-      -gtk-icon-source: -gtk-scaled(url("../assets/checkbox-mixed-insensitive.png"), url("../assets/checkbox-mixed-insensitive@2.png")); }
+      -gtk-icon-source: -gtk-scaled(url("../assets/checkbox-mixed-insensitive-dark.png"), url("../assets/checkbox-mixed-insensitive-dark@2.png")); }
   .check.menuitem {
     -gtk-icon-source: -gtk-scaled(url("../assets/menuitem-checkbox-checked-insensitive.png"), url("../assets/menuitem-checkbox-checked-insensitive@2.png")); }
     .check.menuitem:insensitive {
@@ -3130,32 +3131,32 @@ GtkPaned {
 
 .view.content-view.check:not(list), GtkHTML.content-view.check:not(list) {
   icon-shadow: none;
-  -gtk-icon-source: -gtk-scaled(url("../assets/grid-selection-unchecked.png"), url("../assets/grid-selection-unchecked@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("../assets/grid-selection-unchecked-dark.png"), url("../assets/grid-selection-unchecked-dark@2.png"));
   background-color: transparent; }
 
 .view.content-view.check:hover:not(list), GtkHTML.content-view.check:hover:not(list) {
   icon-shadow: none;
-  -gtk-icon-source: -gtk-scaled(url("../assets/grid-selection-unchecked.png"), url("../assets/grid-selection-unchecked@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("../assets/grid-selection-unchecked-dark.png"), url("../assets/grid-selection-unchecked-dark@2.png"));
   background-color: transparent; }
 
 .view.content-view.check:active:not(list), GtkHTML.content-view.check:active:not(list) {
   icon-shadow: none;
-  -gtk-icon-source: -gtk-scaled(url("../assets/grid-selection-checked.png"), url("../assets/grid-selection-checked@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("../assets/grid-selection-checked-dark.png"), url("../assets/grid-selection-checked-dark@2.png"));
   background-color: transparent; }
 
 .view.content-view.check:checked:not(list), GtkHTML.content-view.check:checked:not(list) {
   icon-shadow: none;
-  -gtk-icon-source: -gtk-scaled(url("../assets/grid-selection-checked.png"), url("../assets/grid-selection-checked@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("../assets/grid-selection-checked-dark.png"), url("../assets/grid-selection-checked-dark@2.png"));
   background-color: transparent; }
 
 .view.content-view.check:checked:hover:not(list), GtkHTML.content-view.check:checked:hover:not(list) {
   icon-shadow: none;
-  -gtk-icon-source: -gtk-scaled(url("../assets/grid-selection-checked.png"), url("../assets/grid-selection-checked@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("../assets/grid-selection-checked-dark.png"), url("../assets/grid-selection-checked-dark@2.png"));
   background-color: transparent; }
 
 .view.content-view.check:checked:active:not(list), GtkHTML.content-view.check:checked:active:not(list) {
   icon-shadow: none;
-  -gtk-icon-source: -gtk-scaled(url("../assets/grid-selection-checked.png"), url("../assets/grid-selection-checked@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("../assets/grid-selection-checked-dark.png"), url("../assets/grid-selection-checked-dark@2.png"));
   background-color: transparent; }
 
 /********
